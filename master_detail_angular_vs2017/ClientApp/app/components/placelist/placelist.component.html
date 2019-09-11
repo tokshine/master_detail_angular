@@ -1,0 +1,17 @@
+<h2>{{title}}</h2>
+<ul class="items">
+    <li *ngFor="let item of items"
+        (click)="onSelect(item)">
+        <span>{{item.Name}}</span>
+    </li>
+</ul>
+
+<style type="text/css">
+    ul.items li {
+        cursor: pointer;
+    }
+
+        ul.items li:hover {
+            background-color: #E8FAEC;
+        }
+</style>

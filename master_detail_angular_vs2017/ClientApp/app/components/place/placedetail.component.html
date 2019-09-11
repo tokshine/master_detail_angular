@@ -1,0 +1,35 @@
+<div *ngIf="item" class="item-details">
+    {{pageTitle}}
+    <h2>{{item.Name}} - Detail View</h2>
+    <ul>
+        <li>
+            <label>Subject:</label>
+            <input [(ngModel)]="item.Name" placeholder="Insert the title..." />
+        </li>
+        <li>
+            <label>Message:</label>
+            <textarea [(ngModel)]="item.Location" placeholder="Insert a message..."></textarea>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <button (click)='onBack()'>Back to Home</button>
+</div>
+<style type="text/css">
+    .item-details {
+        margin: 5px;
+        padding: 5px 10px;
+        border: 1px solid 9BCCE0;
+        background-color: #DDF0D5;
+        width: 500px;
+    }
+
+        .item-details * {
+            vertical-align: middle;
+        }
+
+        .item-details ul li {
+            padding: 5px 0;
+        }
+</style>
